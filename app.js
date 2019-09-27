@@ -1,7 +1,16 @@
 const express = require("express");
-const app = express();
 const expressLayouts = require("express-ejs-layouts");
-// var bodyParser = require("body-parser");
+const mongoose = require("mongoose");
+const app = express();
+
+// DB Config
+const db = require("./config/keys").MongoURI;
+
+// MongoDB Connection
+// mongoose
+//   .connect(db, { useNewUrlParser: true })
+//   .then(() => console.log("MongoDB Connected"))
+//   .catch(err => console.log(err));
 
 // app.use(express.static("public"));
 // EJS SETUP
