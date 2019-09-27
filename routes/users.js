@@ -1,5 +1,8 @@
 const express = require("express");
 const router = express.Router();
+const bcrypt = require("bcryptjs");
+// Load User model
+const User = require("../models/User");
 
 // Login Page
 router.get("/login", (req, res) => res.render("login"));
@@ -27,15 +30,37 @@ router.post("/register", (req, res) => {
   }
 
   if (errors.length > 0) {
-    res.render('register', {
+    // Send data back to register view
+    res.render("register", {
       errors,
       name,
       email,
       password,
       password2
-    })
+    });
   } else {
-    res.send("pass");
+    // Create User
+    const newUser = new User({
+      name,
+      email,
+      password
+    });
+
+    // Hash Password
+    bcrypt.genSalt(10, (err, salt) =>
+      bcrypt.hash(newUser.password, salt, (err, hash) => {
+        if (err) throw err;
+        // Set Password to Hashed
+        newUser.password = hash;
+        // Save User
+        newUser
+          .save()
+          .then(user => {
+            res.redirect("/users/login");
+          })
+          .catch(err => console.log(err));
+      })
+    );
   }
 });
 
