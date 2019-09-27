@@ -10,6 +10,4 @@ router.get("/dashboard", ensureAuthenticated, (req, res) =>
   })
 );
 
-router.get("/view", (req, res) => res.render("view"));
-
 module.exports = router;
