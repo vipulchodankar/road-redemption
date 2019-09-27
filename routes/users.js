@@ -83,4 +83,12 @@ router.get("/logout", (req, res) => {
   res.redirect("/users/login");
 });
 
+// For invalid URLS
+router.get("*", (req, res) => {
+  res.render("404", {
+    link: "/users/login",
+    msg: "Go to login"
+  });
+});
+
 module.exports = router;
