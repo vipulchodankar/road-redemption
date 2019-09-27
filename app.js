@@ -12,6 +12,10 @@ app.get("/", function(req, res) {
   res.render("home");
 });
 
+app.get("/login", function(req, res) {
+  res.send("You have reached the login route");
+});
+
 app.get("*", function(req, res) {
   res.render("404");
 });
