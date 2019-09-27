@@ -1,0 +1,25 @@
+{
+  "name": "pothole-detector",
+  "version": "1.0.0",
+  "description": "Goa Hacks 2019 Project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vipulchodankar/pothole-detector.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vipulchodankar/pothole-detector/issues"
+  },
+  "homepage": "https://github.com/vipulchodankar/pothole-detector#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^2.7.1",
+    "express": "^4.17.1"
+  }
+}
