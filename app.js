@@ -4,15 +4,19 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const flash = require("connect-flash");
 const session = require("express-session");
+const passport = require("passport");
 
 const app = express();
+
+// Passport Config
+require("./config/passport")(passport);
 
 // DB Config
 const db = require("./config/keys").MongoURI;
 
 // MongoDB Connection
 mongoose
-  .connect(db, { useNewUrlParser: false })
+  .connect(db, { useNewUrlParser: true })
   .then(() => console.log("MongoDB Connected"))
   .catch(err => console.log(err));
 
@@ -24,21 +28,27 @@ app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // Express Session
-// app.use(
-//   session({
-//     secret: "keyboard",
-//     resave: true,
-//     saveUnitialized: true
-//   })
-// );
+app.use(
+  session({
+    secret: "keyboard",
+    resave: true,
+    saveUninitialized: true
+  })
+);
+
+// Passport Middleware
+app.use(passport.initialize());
+app.use(passport.session());
 
 // Connect Flash
-// app.use(flash());
+app.use(flash());
 
 // Global Vars
-// app.use((req, res, next) => {
-//   res.locals.success_msg = req.flash("success_msg");
-// });
+app.use((req, res, next) => {
+  res.locals.success_msg = req.flash("success_msg");
+  res.locals.error_msg = req.flash("error_msg");
+  next();
+});
 
 // Routes
 app.use("/", require("./routes/index"));
@@ -46,6 +56,7 @@ app.use("/users", require("./routes/users"));
 
 const PORT = process.env.PORT || 4200;
 
-app.listen(PORT, function() {
-  console.log(`Application is running at http://localhost:${PORT}/`);
-});
+app.listen(
+  PORT,
+  console.log(`Application is running at http://localhost:${PORT}/`)
+);
