@@ -1,24 +1,20 @@
-var express = require("express");
-var app = express();
-var bodyParser = require("body-parser");
+const express = require("express");
+const app = express();
+const expressLayouts = require("express-ejs-layouts");
+// var bodyParser = require("body-parser");
 
-app.use(express.static("public"));
+// app.use(express.static("public"));
+// EJS SETUP
+app.use(expressLayouts);
 app.set("view engine", "ejs");
-app.use(bodyParser.urlencoded({ extended: true }));
 
-var PORT = 4200;
+// app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get("/", function(req, res) {
-  res.render("home");
-});
+// Routes
+app.use("/", require("./routes/index"));
+app.use("/users", require("./routes/users"));
 
-app.get("/login", function(req, res) {
-  res.send("You have reached the login route");
-});
-
-app.get("*", function(req, res) {
-  res.render("404");
-});
+const PORT = process.env.PORT || 4200;
 
 app.listen(PORT, function() {
   console.log(`Application is running at http://localhost:${PORT}/`);
