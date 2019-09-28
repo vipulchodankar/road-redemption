@@ -1,6 +1,4 @@
-<h4>//This is the pothole add route.</h4>
-
-<div class="container my-4">
+<div class="container my-5">
   <div class="row justify-content-end">
     <div class="col-sm-4 my-5">
       <div class="card card-body">
@@ -14,10 +12,10 @@
             <input
               type="number"
               id="latitude"
-              name="latitude"
+              name="x"
               class="form-control"
               placeholder="Enter Latitude"
-              value="<%= typeof latitude != 'undefined' ? latitude : '' %>"
+              value="<%= typeof x != 'undefined' ? x : '' %>"
             />
           </div>
           <div class="form-group">
@@ -25,10 +23,10 @@
             <input
               type="number"
               id="longitude"
-              name="longitude"
+              name="y"
               class="form-control"
               placeholder="Enter Longitude"
-              value="<%= typeof longitude != 'undefined' ? longitude : '' %>"
+              value="<%= typeof y != 'undefined' ? y : '' %>"
             />
           </div>
           <div class="form-group">
