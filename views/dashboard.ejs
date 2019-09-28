@@ -1,12 +1,25 @@
 <div class="row mt-3 ml-5">
-  <h3>Dashboard</h3>
+  <h3><b>Dashboard</b></h3>
 </div>
 
-<hr>
+<hr />
 
-<h5 class="ml-5">Welcome <%=name%> </h5>
-
-<div>
-  <a class="btn btn-primary text-white" href="/potholes/view">Display the potholes</a>
-  <a class="btn btn-success text-white" href="/potholes/add">Add a pothole</a>
+<div class="row justify-content-between">
+  <div class="col-md-6">
+    <h5 class="ml-5 mb-4">Welcome, <%=user.name%>!</h5>
+    <h6 class="ml-5 my-2">Email: <%=user.email%></h6>
+    <h6 class="ml-5 my-2">Score: X</h6>
+  </div>
+  <div class="col-md-4">
+    <div class="my-3">
+      <a class="btn btn-primary text-white" href="/potholes/view"
+        >Display the potholes</a
+      >
+    </div>
+    <div class="my-3">
+      <a class="btn btn-success text-white" href="/potholes/add"
+        >Add a pothole</a
+      >
+    </div>
+  </div>
 </div>

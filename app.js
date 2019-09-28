@@ -60,7 +60,7 @@ app.use("/users", require("./routes/users"));
 app.use("/potholes", require("./routes/potholes"));
 app.use("/", require("./routes/index"));
 
-const PORT = process.env.PORT || 4200;
+const PORT = process.env.PORT || 6969;
 
 app.listen(
   PORT,
