@@ -1,19 +1,21 @@
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
-[![Made with Express](https://img.shields.io/badge/Made%20with-Express-green)](https://expressjs.com/) 
+[![License: MIT](https://img.shields.io/badge/License%3A-%20MIT-red)](https://opensource.org/licenses/MIT) 
+[![Made with Node.js](https://img.shields.io/badge/Made%20with-Node.js-green)](https://nodejs.org/en/) 
+[![Made with Express](https://img.shields.io/badge/Made%20with-Express-lightgrey)](https://expressjs.com/) 
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/vipulchodankar/road-redemption/graphs/commit-activity)
 
-
-# Pothole Detector
+# Road Redemption
 Goa Hacks 2019 Project
 
 ### Getting started
 1. Clone the repo
 2. Run `npm install`
-3. Run `nodemon`
+3.  - Run `npm run start`
+    - Run `npm run dev` to run in dev mode
 
 ### Technology Stack
 - Frontend: HTML, CSS, JavaScript
 - Backend: Node.js, Express.js
-- Database: -
+- Database: MongoDB
 
 ### Team Members
 - [Vidhi Kumar](http://github.com/vidhi-kumar)
