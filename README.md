@@ -13,7 +13,7 @@ Goa Hacks 2019 Project
     - Run `npm run dev` to run in dev mode
 
 ### Technology Stack
-- Frontend: HTML, CSS, JavaScript
+- Frontend: HTML, CSS, Bootstrap 4, JavaScript
 - Backend: Node.js, Express.js
 - Database: MongoDB
 
