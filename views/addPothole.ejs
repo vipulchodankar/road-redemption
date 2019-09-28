@@ -1,30 +1,16 @@
 <h4>//This is the pothole add route.</h4>
-<div class="jumbotron text-center">
-  <h1>POTHOLE-DETECTER</h1>
-  <p>Its time to make our journey smooth</p>
-</div>
 
-<div class="container">
-  <div class="row">
-    <div class="col-sm-4">
-      <!-- <h3>Column 1</h3> -->
-      <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p> -->
-      <!-- <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p> -->
-    </div>
-    <div class="col-sm-4">
-      <!-- <h3>Column 2</h3> -->
-      <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p> -->
-      <!-- <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p> -->
-    </div>
-    <div class="col-sm-4">
+<div class="container my-4">
+  <div class="row justify-content-end">
+    <div class="col-sm-4 my-5">
       <div class="card card-body">
         <h3 class="text-center mb-3">
           Enter Pothole Details
         </h3>
         <% include ./partials/messages %>
-        <form action="/potholes/register" method="POST">
+        <form action="/potholes/add" method="POST">
           <div class="form-group">
-            <label for="name">Latitude</label>
+            <label for="latitude">Latitude</label>
             <input
               type="number"
               id="latitude"
@@ -35,7 +21,7 @@
             />
           </div>
           <div class="form-group">
-            <label for="name">Longitude</label>
+            <label for="longitude">Longitude</label>
             <input
               type="number"
               id="longitude"
@@ -46,7 +32,7 @@
             />
           </div>
           <div class="form-group">
-            <label for="name">Image</label>
+            <label for="image">Image</label>
             <input
               type="text"
               id="image"

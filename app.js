@@ -65,4 +65,5 @@ const PORT = process.env.PORT || 4200;
 app.listen(
   PORT,
   console.log(`Application is running at http://localhost:${PORT}/`)
-);
+).on('error', function(err){
+});

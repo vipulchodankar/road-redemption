@@ -1,11 +1,11 @@
 const mongoose = require("mongoose");
 
 const PotholeSchema = new mongoose.Schema({
-  longitude: {
+  y: {
     type: Number,
     required: true
   },
-  latitude: {
+  x: {
     type: Number,
     required: true
   },
