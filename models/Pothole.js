@@ -11,7 +11,6 @@ const PotholeSchema = new mongoose.Schema({
   },
   email: {
     type: String,
-    required: true
   },
   date: {
     type: Date,

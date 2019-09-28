@@ -18,7 +18,7 @@ router.post("/add", (req, res) => {
   // Check Required Fields
   if (!x || !y) {
     errors.push({ msg: "Please fill in all fields." });
-    console.log(x + " " + y + " " + image);
+    console.log()
   }
 
   if (errors.length > 0) {
