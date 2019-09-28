@@ -1,34 +1,68 @@
 <h4>//This is the pothole add route.</h4>
-    <div class="jumbotron text-center">
-      <h1>POTHOLE-DETECTER</h1>
-      <p>Its time to make our journey smooth</p> 
+<div class="jumbotron text-center">
+  <h1>POTHOLE-DETECTER</h1>
+  <p>Its time to make our journey smooth</p>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <!-- <h3>Column 1</h3> -->
+      <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p> -->
+      <!-- <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p> -->
     </div>
-      
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <!-- <h3>Column 1</h3> -->
-          <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p> -->
-          <!-- <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p> -->
-        </div>
-        <div class="col-sm-4">
-          <!-- <h3>Column 2</h3> -->
-          <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p> -->
-          <!-- <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p> -->
-        </div>
-        <div class="col-sm-4">
-          <h3>Enter Details</h3>
-          <form action="/registerPothole" method="POST">
-            Coordinates:<br>
-            <input type="text" name="firstname">
-            <br>
-            Time:<br>
-            <input type="text" name="lastname">
-            <br><br>
-            <input type="submit" value="Submit">
-          </form>          
-          <!-- <p></p> -->
-          <!-- <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p> -->
-        </div>
+    <div class="col-sm-4">
+      <!-- <h3>Column 2</h3> -->
+      <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p> -->
+      <!-- <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p> -->
+    </div>
+    <div class="col-sm-4">
+      <div class="card card-body">
+        <h3 class="text-center mb-3">
+          Enter Pothole Details
+        </h3>
+        <% include ./partials/messages %>
+        <form action="/potholes/register" method="POST">
+          <div class="form-group">
+            <label for="name">Latitude</label>
+            <input
+              type="number"
+              id="latitude"
+              name="latitude"
+              class="form-control"
+              placeholder="Enter Latitude"
+              value="<%= typeof latitude != 'undefined' ? latitude : '' %>"
+            />
+          </div>
+          <div class="form-group">
+            <label for="name">Longitude</label>
+            <input
+              type="number"
+              id="longitude"
+              name="longitude"
+              class="form-control"
+              placeholder="Enter Longitude"
+              value="<%= typeof longitude != 'undefined' ? longitude : '' %>"
+            />
+          </div>
+          <div class="form-group">
+            <label for="name">Image</label>
+            <input
+              type="text"
+              id="image"
+              name="image"
+              class="form-control"
+              placeholder="Enter Image URL"
+              value="<%= typeof image != 'undefined' ? image : '' %>"
+            />
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">
+            Register
+          </button>
+        </form>
       </div>
+      <!-- <p></p> -->
+      <!-- <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p> -->
     </div>
+  </div>
+</div>

@@ -5,7 +5,7 @@ const PotholeSchema = new mongoose.Schema({
     type: Number,
     required: true
   },
-  latitiude: {
+  latitude: {
     type: Number,
     required: true
   },
@@ -16,9 +16,12 @@ const PotholeSchema = new mongoose.Schema({
   date: {
     type: Date,
     default: Date.now
+  },
+  image: {
+    type: String
   }
 });
 
-const Pothole = mongoose.model("Pothole", Pothole);
+const Pothole = mongoose.model("Pothole", PotholeSchema);
 
-module.exports = User;
+module.exports = Pothole;
