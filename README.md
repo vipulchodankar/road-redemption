@@ -5,7 +5,11 @@
 
 # Road Redemption
 Goa Hacks 2019 Project
-
+### Problem Statement
+-There are so many potholes on Indian roads and many fatal accidents take place due to the same.
+ As a responsible citizens, it's our duty to get to the Government's notice about the ill state of the roads. 
+ Make an app or a web app where users will be able to upload pictures of potholes along with geolocation.
+ You can add some add-onn features to it which will give you marks for innovation.
 ### Getting started
 1. Clone the repo
 2. Run `npm install`
@@ -22,5 +26,7 @@ Goa Hacks 2019 Project
 - [Vipul Chodankar](http://github.com/vipulchodankar)
 - [Vivek Silimkhan ](http://github.com/viveksil)
 
-###Achievements
+### Achievements
 -Awarded with "Best Technology Award" in Goa Hacks 1.0 during GDG Devfest Goa 2019.
+
+
