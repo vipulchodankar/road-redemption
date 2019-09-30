@@ -21,3 +21,6 @@ Goa Hacks 2019 Project
 - [Vidhi Kumar](http://github.com/vidhi-kumar)
 - [Vipul Chodankar](http://github.com/vipulchodankar)
 - [Vivek Silimkhan ](http://github.com/viveksil)
+
+###Achievements
+-Awarded with "Best Technology Award" in Goa Hacks 1.0 during GDG Devfest Goa 2019.
