@@ -20,7 +20,7 @@ Goa Hacks 2019 Project
 - Frontend: HTML, CSS, Bootstrap 4, JavaScript
 - Backend: Node.js, Express.js
 - Database: MongoDB
-- APIs and Libraries:Leaflet 
+- APIs and Libraries: Leaflet 
 
 ### Team Members
 - [Vidhi Kumar](http://github.com/vidhi-kumar)
