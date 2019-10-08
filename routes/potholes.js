@@ -13,12 +13,23 @@ router.get("/view", (req, res) => {
 
 router.post("/add", (req, res) => {
   const { y, x, image } = req.body;
-  
+
   let errors = [];
   // Check Required Fields
   if (!x || !y) {
     errors.push({ msg: "Please fill in all fields." });
-    console.log()
+  }
+
+  if ((x < -90 || x > 90) && (y < -180 || y > 180)) {
+    errors.push({ msg: "Please enter valid coordinates." });
+  }
+
+  else if (x < -90 || x > 90) {
+    errors.push({ msg: "Please enter valid latitude value." });
+  }
+
+  else if (y < -180 || y > 180) {
+    errors.push({ msg: "Please enter valid longitude value." });
   }
 
   if (errors.length > 0) {
